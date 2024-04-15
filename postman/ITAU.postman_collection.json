@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "4dc8d3a9-977d-4da7-a824-551870e30694",
+		"name": "ITAU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10746441",
+		"_collection_link": "https://gold-zodiac-842596.postman.co/workspace/Team-Workspace~67c2bcf1-ff9b-4b99-8682-0425cadb66c4/collection/10746441-4dc8d3a9-977d-4da7-a824-551870e30694?action=share&source=collection_link&creator=10746441"
+	},
+	"item": [
+		{
+			"name": "Consulta Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/clientes/bcdd1048-a501-4608-bc82-66d7b4db3600",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"clientes",
+						"bcdd1048-a501-4608-bc82-66d7b4db3600"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Conta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/contas/d0d32142-74b7-4aca-9c68-838aeacef96b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"contas",
+						"d0d32142-74b7-4aca-9c68-838aeacef96b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Saldo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"valor\": 1000.00,\r\n    \"conta\": {\r\n        \"idOrigem\": \"d0d32142-74b7-4aca-9c68-838aeacef96b\",\r\n        \"idDestino\": \"41313d7b-bd75-4c75-9dea-1f4be434007f\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/contas/saldos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"contas",
+						"saldos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza BACEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"valor\": 1000.00,\r\n    \"conta\": {\r\n        \"idOrigem\": \"d0d32142-74b7-4aca-9c68-838aeacef96b\",\r\n        \"idDestino\": \"41313d7b-bd75-4c75-9dea-1f4be434007f\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/notificacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"notificacoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Transferencia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"idCliente\": \"2ceb26e9-7b5c-417e-bf75-ffaa66e3a76f\",\r\n    \"valor\": 1000.00,\r\n    \"conta\": {\r\n        \"idOrigem\": \"d0d32142-74b7-4aca-9c68-838aeacef96b\",\r\n        \"idDestino\": \"41313d7b-bd75-4c75-9dea-1f4be434007f\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transferencia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transferencia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
